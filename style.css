@@ -37,6 +37,7 @@ html {
 	flex-direction: column-reverse;
 	justify-content: center;
 	text-align: center;
+  gap: 25px;
 }
 
 .slide-img {
@@ -65,7 +66,7 @@ html {
 .testimonial-text {
 	font-size: 18px;
 	font-weight: 300;
-	line-height: 0.65rem;
+	line-height: .75rem;
 	color: hsl(240, 38%, 20%);
 }
 
@@ -94,6 +95,12 @@ html {
 	height: 100%;
 	position: absolute;
 	cursor: pointer;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: antiquewhite;
+
 }
 
 .buttons {
@@ -138,6 +145,41 @@ html {
 
 .slide-2 {
 	display: none;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+  .container {
+   align-items: center;
+  }
+  .slide {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .slide-text {
+    background-position: 10% top;
+    background-size: 100px;
+    align-items: flex-start;
+  }
+
+
+
+  .slide-img {
+    margin-left: -100px;
+    z-index: -1;
+  }
+
+  .slide-img img {
+    width: 400px;
+  }
+
+  .buttons {
+    top: 415px;
+    transform: translate(0);
+    left: calc(100% - 400px);
+  }
 }
 
 .attribution {
